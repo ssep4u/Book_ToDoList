@@ -7,4 +7,5 @@ def index(request):
 
 
 def createTodo(request):
-  return HttpResponse('create Todo를 할 거야!')
+  user_input_str = request.POST['todoContent']
+  return HttpResponse('create Todo를 할 거야! =>' + user_input_str)
